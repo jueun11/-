@@ -10,7 +10,7 @@ function solution(S) {
     // a가 나왔을 때 -> answerArray[0] 현재 배열 돌고 있는 index를 넣어주면 되겠죠?
     // b의 ASCII : 98 - 97 => 1
     // a의 ASCII : 97 - 97 => 0
-    //아스티 코드를 알아야 하는 문제였다. 
+    //아스키 코드를 알아야 하는 문제였다. 
     let answerArray = new Array(26).fill(-1);
     //answerArray라는 배열을 만든다. new Array는 생성자 함수이다. 26은 배열요소의 갯수이다. fill은 배열 시작부터 끝까지 정적인 값 하나로 채우는 메서드이다.
     for (let i = 0; i < S.length; ++i) {
@@ -18,7 +18,7 @@ function solution(S) {
         let nowChar = S[i];
         // nowChar 는 b a e k j o o n 이 순차적으로 대입된다.
         let answerArrayIdx = nowChar.charCodeAt() - 97;
-        // answerArrayIdx 는 위 영어의 아스티 코드에서 - 97을 한 값이다.
+        // answerArrayIdx 는 위 영어의 아스키 코드에서 - 97을 한 값이다.
         // b a e k j o o n을 순차적으로 -97한 값을 넣게된다
         // 여기서 answerArrayIdx는 총 알파벳 숫자 이상으로 커질 수 없다(최대 26)
         if (answerArray[answerArrayIdx] === -1) {
