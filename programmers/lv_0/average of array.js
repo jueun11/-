@@ -17,9 +17,11 @@ function solution(numbers) {
 function solution(numbers) {
     var answer = 0;
     for(i of numbers) {
-      //for of 반복문을 활용하였다.주로 배열에 활용하는 반복문스타일이라고한다.
+      //for of 반복문을 활용하였다.주로 배열에 활용하는 반복문스타일이라고한다. i라는 변수를 numbers의 length만큼 반복하게된다.
+      //반복진행할때 numbers[0]에 해당 식 실행 -> numbers[1]에 해당 식 실행 -> numbers[2]에 실행..이런식으로 각 요소에 순차적으로 실행한다.
       //문법은 for(변수 of 객체){}로 위의 let i= 0; i<numbers.length; i++를 보다 간단히 표현했다. 여기서 i는 각 배열 요소이다.
       //위의 내 풀이면 numbers[i]같이 표현되지만, 여기에는 i에 직접적으로 각 요소가 들어가게된다.
+      //노션에 for of에 대해 간단히 정리해두었다. 헷깔릴때마다 참고, 추가 지식이 있을때 보완하자
         answer += i
       //answer에 i(요소..123..)를 넣고 더한다.
     }
