@@ -1,4 +1,4 @@
-내 풀이
+//내 풀이
 function solution(n) {
     let answer =0;
     for(let i = 0; i <= n; i++){
