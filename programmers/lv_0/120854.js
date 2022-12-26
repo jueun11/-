@@ -12,6 +12,7 @@ function solution(strlist) {
 function solution(strlist) {
   return strlist.map((el) => el.length)
 }
+
 //map을 사용하여 간단히 풀었다.
 //map은 배열의 모든 요소에 작업을 수행시켜준다.
 //예를들어 모든 요소에 *3을 해주고 싶다치면
