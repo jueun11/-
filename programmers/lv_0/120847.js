@@ -13,7 +13,7 @@ function solution(numbers) {
 //좋아요, 다수의 풀이
 function solution(numbers) {
   numbers.sort((a,b)=>b-a);
-  //sort는 배열을 정렬할 때 사용한다. (a,b)=>b-a 으로 내림차순으로 표시되게한다.  (a,b)=>a-b를 사용하면 오름차순이다.
+//sort는 배열을 정렬할 때 사용한다. (a,b)=>b-a 으로 내림차순으로 표시되게한다.  (a,b)=>a-b를 사용하면 오름차순이다.
   //a,b)=>b-a의 원리는 numbers[0], numbers[1]를 가져오고, numbers[1] - numbers[0]을 했을때 양수면 순서를 바꾸고 음수면 순서를 그대로둔다
   //1,2가져오고 2 - 1 = 1 양수이기 때문에 순서바꿈 1(numbers[1])를  2(numbers[0])의 자리로 이동한다.   
   //array[0],array[1]하고 array[1],array[2]를 불러오는식 순차적으로 진행
@@ -24,8 +24,12 @@ function solution(numbers) {
   //a((numbers[2]), b(numbers[3])을 가져온다 4 - 2 양수, 순서바꾼다
   //[4, 3, 2, 1, 5]
   //a((numbers[3]), b(numbers[4])을 가져온다 5 - 1 양수, 순서바꾼다
-  //[5, 4, 3, 2, 1]
-  //이렇게 반복하다보면 정렬이 끝나고 더이상 바뀌지 않게된다.(계속음수)
-  //이 방식은 연산량이 많아 좋지않다.
+  //[4, 3, 2, 5, 1]
+	//다시 a((numbers[0]), b(numbers[1])을 가져온다 3 - 4 음수, 순서그대로
+	//[4, 3, 2, 5, 1]
+  //...
+	// a((numbers[2]), b(numbers[3])을 가져온다 5 - 2 양수, 순서바꾼다
+	//[4, 3, 5, 2, 1]
+//반복하다가 더이상 바꿀게 없을때 멈춘다.
   return numbers[0]*numbers[1];
 }
