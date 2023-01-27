@@ -26,7 +26,7 @@ function solution(my_str, n) {
   //이는 match함수를 사용해서 그런것이다. match는 검색과 일치하는 문자열을 반환할 때, 중복을 방지하기 위해 기존 배열을 순차적으로 잘라서 진행한다. 때문에 순차적 진행 + 모든 문자 1~ n의 규칙에 따라 중복되지않게 값을 반환할 수 있는것이다.
 }
 
-// *다수의 풀이
+// *다수의 풀이 - slice
 function solution(my_str, n) {
   let res = [];
   for (let i = 0; i < my_str.length; i += n) {
